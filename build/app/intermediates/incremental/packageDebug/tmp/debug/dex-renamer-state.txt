@@ -1,0 +1,4 @@
+#Fri Jan 25 04:06:54 BRT 2019
+base.0=/home/rafael/sysvale/curso1/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
