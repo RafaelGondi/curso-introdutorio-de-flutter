@@ -1,2 +1,2 @@
-# curso1
-Repositório do curso1 de flutter
+# Introdução ao flutter
+Repositório do curso de introdução ao flutter
