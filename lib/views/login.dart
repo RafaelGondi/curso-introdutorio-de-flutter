@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:curso1/views/main_page.dart';
+import 'package:curso1/views/courses_page.dart';
 
 class Login extends StatelessWidget {
 	final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -20,14 +20,8 @@ class Login extends StatelessWidget {
 	}
 
 	String _validatePassword(String password) {
-		RegExp passwordPattern = RegExp(
-			r"^(?=.*([a-z]))(?=.*([A-Z]))(?=.*([0-9]))(?=.*([!@#\$%\^&\*]))(?=.{8,})");
-
 		if (password.isEmpty) {
 			return "Insira uma senha";
-		} else if (!passwordPattern.hasMatch(password)) {
-			return "A senha deve conter no mínimo 8 caracteres, letras maiúsculas,\n minúsculas," +
-				" números e ao menos um caractere especial.";
 		}
 	}
 
@@ -43,8 +37,8 @@ class Login extends StatelessWidget {
 						mainAxisAlignment: MainAxisAlignment.center,
 						children: <Widget>[
 							Image.asset(
-								'assets/google.gif',
-								height: 200,
+								'assets/logo_einfo2.png',
+                width: 300,
 							),
 							Form(
 								key: _formKey,
@@ -79,14 +73,13 @@ class Login extends StatelessWidget {
 											child: RaisedButton(
 												onPressed: () {
 													if (_formKey.currentState.validate()) {
-														print('ola');
-														// var route = MaterialPageRoute(
-														// 	builder: (BuildContext context) =>  AccInfo(email: emailController.text),
-														// );
+														var route = MaterialPageRoute(
+															builder: (BuildContext context) =>  Courses(),
+														);
 
-														// Navigator.of(context).push(route);
+														Navigator.of(context).push(route);
 
-														//Navigator.of(context).pushNamed('/main_page');
+														Navigator.of(context).pushNamed('/courses_page');
 													}
 												},
 												color: Colors.blue,
